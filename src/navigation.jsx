@@ -13,7 +13,7 @@ function Navigation() {
                     <div className="dropdown-content">
                         <a href="#">Breakfast</a>
                         <a href="#">Lunch</a>
-                        <a href="#">Dinner</a>
+                        <a href="#">DINNER</a>
                         <a href="#">SNACKS</a>
                     </div>
                 </div>
