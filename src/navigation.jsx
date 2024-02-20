@@ -14,7 +14,7 @@ function Navigation() {
                         <a href="#">Breakfast</a>
                         <a href="#">Lunch</a>
                         <a href="#">Dinner</a>
-                        <a href="#">Snacks</a>
+                        <a href="#">SNACKS</a>
                     </div>
                 </div>
 
