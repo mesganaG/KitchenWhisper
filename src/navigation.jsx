@@ -1,11 +1,10 @@
 import './navStyle.css';
 
-function Navigation() {
+function Navigation(props) {
     return (
         <nav>
             <div className="logo">KITCHENWHISPER</div>
             <div className="nav-list">
-
 
                 <div className="list-container">
 
@@ -14,17 +13,20 @@ function Navigation() {
                         <a href="#">Breakfast</a>
                         <a href="#">Lunch</a>
                         <a href="#">Dinner</a>
-                        <a href="#">SNACKS</a>
+                        <a href="#">Snack</a>
+                        <a href="#">Desserts</a>
                     </div>
                 </div>
 
                 <div className="list-container">
                     <button className='nav-list-btn'>Cuisine</button>
                     <div className="dropdown-content">
-                        <a href="#">Breakfast</a>
-                        <a href="#">Lunch</a>
-                        <a href="#">Dinner</a>
-                        <a href="#">Snacks</a>
+                        <a href="#">Ethiopian</a>
+                        <a href="#">Mexican</a>
+                        <a href="#">Chinese</a>
+                        <a href="#">Indian</a>
+                        <a href="#">Japanese</a>
+             
                     </div>
 
                 </div>
@@ -32,20 +34,24 @@ function Navigation() {
                 <div className="list-container">
                     <button className='nav-list-btn'>Ingredients</button>
                     <div className="dropdown-content">
-                        <a href="#">Breakfast</a>
-                        <a href="#">Lunch</a>
-                        <a href="#">Dinner</a>
-                        <a href="#">Snacks</a>
+                        <a href="#">Chicken</a>
+                        <a href="#">Beef</a>
+                        <a href="#">Seafood</a>
+                        <a href="#">Pasta</a>
+                        <a href="#">Fruit</a>
+                        <a href="#">Pork</a>
                     </div>
                 </div>
 
                 <div className="list-container">
                     <button className='nav-list-btn'>Diets</button>
                     <div className="dropdown-content">
-                        <a href="#">Breakfast</a>
-                        <a href="#">Lunch</a>
-                        <a href="#">Dinner</a>
-                        <a href="#">Snacks</a>
+                        <a href="#">Balanced</a>
+                        <a href="#">High Protein</a>
+                        <a href="#">Vegetarian</a>
+                        <a href="#">Low fat</a>
+                        <a href="#">Low Carb</a>
+                        <a href="#">No Sugar</a>
                     </div>
                 </div>
             </div>
