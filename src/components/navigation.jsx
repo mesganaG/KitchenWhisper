@@ -1,6 +1,18 @@
 import './navStyle.css';
-
+import dropdownIcon from '../assets/images/expand_more.svg';
 function Navigation(props) {
+    const expand = () => {
+        let dropdownContent = document.querySelectorAll('.dropdown-content');  
+        let navListBtn = document.querySelectorAll('.nav-list-btn');
+        for(let i = 0; i < navListBtn.length; i++ ){
+            navListBtn[i].addEventListener('click', () => {
+               dropdownContent[i].classList.add('show');
+            });
+            dropdownContent[i].addEventListener('mouseleave', () => {
+                dropdownContent[i].classList.remove('show');
+            });
+        }
+    }
     return (
         <nav>
             <div className="logo">KITCHENWHISPER</div>
@@ -8,7 +20,7 @@ function Navigation(props) {
 
                 <div className="list-container">
 
-                    <button className='nav-list-btn'>Meals</button>
+                    <a className='nav-list-btn' onClick={expand}>Meals <span><img src={dropdownIcon} alt="" /></span></a>
                     <div className="dropdown-content">
                         <a href="#">Breakfast</a>
                         <a href="#">Lunch</a>
@@ -18,8 +30,8 @@ function Navigation(props) {
                     </div>
                 </div>
 
-                <div className="list-container">
-                    <button className='nav-list-btn'>Cuisine</button>
+                <div className="list-container ">
+                    <a className='nav-list-btn' onClick={expand}>Cuisine <span><img src={dropdownIcon} alt="" /></span></a>
                     <div className="dropdown-content">
                         <a href="#">Ethiopian</a>
                         <a href="#">Mexican</a>
@@ -32,7 +44,7 @@ function Navigation(props) {
                 </div>
 
                 <div className="list-container">
-                    <button className='nav-list-btn'>Ingredients</button>
+                    <a className='nav-list-btn' onClick={expand}>Ingredient <span><img src={dropdownIcon} alt="" /></span></a>
                     <div className="dropdown-content">
                         <a href="#">Chicken</a>
                         <a href="#">Beef</a>
@@ -44,14 +56,13 @@ function Navigation(props) {
                 </div>
 
                 <div className="list-container">
-                    <button className='nav-list-btn'>Diets</button>
+                    <a className='nav-list-btn'onClick={expand}>Diets <span><img src={dropdownIcon} alt="" /></span></a>
                     <div className="dropdown-content">
                         <a href="#">Balanced</a>
                         <a href="#">High Protein</a>
                         <a href="#">Vegetarian</a>
                         <a href="#">Low fat</a>
                         <a href="#">Low Carb</a>
-                        <a href="#">No Sugar</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Navigation from './navigation'
-import Category from './categoryNav'
-import SearchBox from './searchRecipe'
+import Navigation from './components/navigation'
+import Category from './components/categoryNav'
+import SearchBox from './components/searchRecipe'
 import './App.css'
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
 
   return (
     <>
-      <Navigation />
+      <Navigation 
+        name="Meals"
+      />
     
     <div className="main-container">
 

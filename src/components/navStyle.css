@@ -4,32 +4,43 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: brown
+    background-color: brown;
+    color: whitesmoke;
+    opacity: .8;
 }
 
 .nav-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 40%;
+    width: 50%;
     padding: 1rem;
 }
 
-.list-container {
-    display: inline-block;
-    position: relative;
-
+.ingr {
+    text-align: left;
+    display: flex;
 }
 
+.list-container {
+    position: relative;
+    text-align: left;
+    width: 150px;
+    padding-right: 1rem;
+}
+
+
 .nav-list-btn {
-    display: inline-block;
+    display: flex;
+    gap: .2rem;
     position: relative;
     background: transparent;
-    width: 5rem;
     margin: 0 auto;
     margin-bottom: .5rem;
-    text-align: center;
+    text-align: left;
     border: none;
+    text-align: center;
+    padding-right: 1rem;
 }
 
 .nav-list-btn:hover {
@@ -37,30 +48,33 @@ nav {
     color: aquamarine;
 }
 
+
 .dropdown-content {
     display: none;
+
+}
+
+.show {
+    display: flex;
     flex-direction: column;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+
 }
 
 .dropdown-content a {
     text-decoration: none;
     padding: .5rem;
     padding-left: .8rem;
-    color: darkgrey;
+    color: brown;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
+    background-color: #e2dcdc;
 
-.list-container:hover .dropdown-content {
-    display: flex;
-    transition: all .5s ease-in-out;
 }
 
 .signup {
