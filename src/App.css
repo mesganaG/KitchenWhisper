@@ -10,9 +10,11 @@ body{
 }
 
 .main-container {
+  max-width: 1800px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 
 }
 
@@ -45,15 +47,17 @@ main {
   flex-direction: column;
   align-items: center;
   background-color: brown;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
-  padding: 1rem;;
+  padding: 2rem;;
+  border-radius: 0rem 5rem 0 5rem;
 }
 
 .header-intro  h1 {
   font-size: 3rem;
   color: #fff;
   margin-bottom: 1rem;
+  
 
 }
 
@@ -78,7 +82,6 @@ main {
 }
 
 .search-box-container {
-  background-color: aquamarine;
   display: flex;
   justify-content: center;
   padding: 1rem;
