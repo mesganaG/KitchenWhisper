@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import Navigation from './navigation'
-import Category from './categoryNav'
-import SearchBox from './searchRecipe'
+import Navigation from './components/navigation'
+import Category from './components/categoryNav'
+import SearchBox from './components/searchRecipe'
+import Meal from './components/mealCard'
+import Footer from './components/footer'
 import './App.css'
+
 
 function App() {
 
 
   return (
+    <>
+      <Navigation
+      />
     <div className="main-container">
-      <Navigation />
+        
+
       <section className="image-slide">
         <div className="image-container">
           <div className="header-intro">
@@ -25,15 +32,15 @@ function App() {
           <h2>Categories</h2>
           <Category 
             category="Breakfast"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
           />
           <Category 
             category="Lunch"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
           />
           <Category 
             category="Dinner"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
           />
           <Category 
             category="Snacks"
@@ -44,11 +51,31 @@ function App() {
         <div className="search-box-container">
           <SearchBox />
         </div>
+
+        <div className="recipe-container">
+          <Meal />
+            <Meal />
+            <Meal />
+            <Meal />
+            <Meal />
+            <Meal />
+
+        
+          {/* <div className="load-more-container">
+            <button>Load More</button>
+          </div> */}
+        </div>
+
+
+       
       </main>
 
-
+        <div className="footer-section">
+          <Footer />
+        </div>
 
     </div>
+    </>
   )
 }
 

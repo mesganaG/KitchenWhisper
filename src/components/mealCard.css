@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.meal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: antiquewhite;
+    width: 30%;
+    border-radius: 1rem;
+}
+
+.meal-image {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.meal-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.meal-info {
+    background-color:cadetblue;
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.meal-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}

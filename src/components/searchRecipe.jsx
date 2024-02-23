@@ -1,6 +1,6 @@
 import React from "react";
 import './searchRecipe.css';
-import searchIcon from './assets/images/search-icon.svg';
+import searchIcon from '../assets/images/search-icon.svg';
 
 function SearchRecipe() {
     return (

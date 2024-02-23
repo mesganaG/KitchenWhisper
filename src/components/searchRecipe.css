@@ -1,15 +1,13 @@
 .search-container {
-    background-color: brown;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 65%;
     align-items: center;
 }
 
 
 form {  
     width: 100%;
-    background-color: antiquewhite;
     display: flex;
 }
 
@@ -19,16 +17,28 @@ form {
     border-radius: 1.5rem 0 0 1.5rem;
     border: none;
     font-size: 1.5rem;
+    background-color:darkgray;
 }
 
 .search-container input:focus {
     outline: none;
 }
 
+.search-container input::placeholder {
+    color: #fff;
+}
+
 form button {
+    background-color: darkgrey;
     width: 100px;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 0 1.5rem 1.5rem 0;
+}
+
+form button:hover {
+    background-color: brown;
+    opacity: .8;
+    transition: transform 1s ease-in-out;
 }
