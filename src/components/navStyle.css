@@ -25,27 +25,19 @@ nav {
 .list-container {
     position: relative;
     text-align: left;
-    width: 150px;
-    padding-right: 1rem;
+
 }
 
 
 .nav-list-btn {
-    display: flex;
-    gap: .2rem;
     position: relative;
-    background: transparent;
-    margin: 0 auto;
-    margin-bottom: .5rem;
-    text-align: left;
-    border: none;
-    text-align: center;
-    padding-right: 1rem;
+    display: flex;
+    flex-direction: row;
+ 
 }
 
 .nav-list-btn:hover {
     cursor: pointer;
-    color: aquamarine;
 }
 
 

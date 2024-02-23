@@ -3,7 +3,7 @@ import dropdownIcon from '../assets/images/expand_more.svg';
 function Navigation(props) {
     const expand = () => {
         let dropdownContent = document.querySelectorAll('.dropdown-content');  
-        let navListBtn = document.querySelectorAll('.nav-list-btn');
+        let navListBtn = document.querySelectorAll('.list-container');
         for(let i = 0; i < navListBtn.length; i++ ){
             navListBtn[i].addEventListener('click', () => {
                dropdownContent[i].classList.add('show');

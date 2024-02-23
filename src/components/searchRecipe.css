@@ -1,7 +1,7 @@
 .search-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 65%;
     align-items: center;
 }
 
