@@ -8,7 +8,7 @@ function Navigation(props) {
             navListBtn[i].addEventListener('click', () => {
                dropdownContent[i].classList.add('show');
             });
-            dropdownContent[i].addEventListener('mouseleave', () => {
+            navListBtn[i].addEventListener('mouseleave', () => {
                 dropdownContent[i].classList.remove('show');
             });
         }

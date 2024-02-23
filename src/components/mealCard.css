@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,29 +9,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background-color: antiquewhite;
-    width: 30%;
+    width: 25%;
     border-radius: 1rem;
+    color: black;
 }
 
 .meal-image {
     display: flex;
     align-items: center;
     width: 100%;
-
 }
 
 .meal-image img {
     width: 100%;
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.meal-image img:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .meal-info {
-    background-color:cadetblue;
+    background-color: azure;
     width: 100%;
     padding: 1rem;
+    text-align: center;
+    border-radius: 0rem 0rem 1rem 1rem;
 
 }
 
