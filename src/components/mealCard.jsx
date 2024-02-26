@@ -1,6 +1,6 @@
 import './mealCard.css';
 import PieChart from './chart';
-
+import { Link } from 'react-router-dom';
 function MealCard(props) {
 
   return (
@@ -13,7 +13,8 @@ function MealCard(props) {
       <div className="meal-info">
 
         <div className="meal-description">
-          <a href="">{props.mealName}</a>
+          {/* <Link to="/mealDetail"><h3>{props.mealName}</h3></Link>  */}
+          <Link to="/mealDetail" id='meal-name' replace><h3>{props.mealName}</h3></Link>
         </div>
      
 

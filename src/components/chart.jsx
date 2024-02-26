@@ -29,14 +29,13 @@ function PieChart(props) {
         plugins: {
             legend: {
                 display: true,
-                position: 'top',
+                position: 'bottom',
                 align: 'start',
                 labels: {
                     color: 'black',
                     fontSIze: 12,
-                    boxWidth: 25,
+                    boxWidth: 12,
                     position: 'bottom',
-
                 },
             },
             tooltip: {

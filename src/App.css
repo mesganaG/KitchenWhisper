@@ -23,7 +23,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 
 }
@@ -92,14 +92,13 @@ main {
 }
 
 .recipe-container {
-  background-color: antiquewhite;
+  justify-content: center;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding: 6rem 2rem 8rem 2rem;
-  margin-top: 3rem;
+  gap: 3rem;
+  margin: 3rem auto;
   border-top: 1px solid darkgray;
+  padding: 2rem;
 }
 
 
