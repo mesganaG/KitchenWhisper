@@ -92,12 +92,12 @@ main {
 }
 
 .recipe-container {
+  background-color: antiquewhite;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
   padding: 6rem 2rem 8rem 2rem;
-
   margin-top: 3rem;
   border-top: 1px solid darkgray;
 }

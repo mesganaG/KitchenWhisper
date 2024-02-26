@@ -1,15 +1,42 @@
 import './mealCard.css';
+import PieChart from './chart';
 
+function MealCard(props) {
 
-function MealCard() {
   return (
     <div className="meal-card">
       <div className="meal-image">
-        <img src="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg" alt="meal" />
+        <img src={props.imageSrc} alt="meal" />
       </div>
+
+
       <div className="meal-info">
-        <h3>Chicken Sweet Potato</h3>
-        <p>Chicken Sweet Potato Meal Prep Bowls are a healthy and nutritious meal that is perfect for lunch or dinner.</p>
+
+        <div className="meal-description">
+          <a href="">{props.mealName}</a>
+        </div>
+     
+
+        <div className="meal-nutrition">
+
+          <div className="chart-container">
+            <PieChart
+              items={[20, 20, 20]}
+            />
+          </div>
+         
+
+          <div className="total-nutrients">
+            <h3>250 <sub>kcal</sub></h3>
+            <ul>
+              <li className='protien'>Protien <span>34g</span></li>
+              <li className='carbs'>Carbs <span>34g</span></li>
+              <li>Fat <span className='fat'>34g</span></li>
+              <li>Sugar<span className='sugar'>34g</span></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   );

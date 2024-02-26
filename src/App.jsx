@@ -10,6 +10,9 @@ import Photo1 from './assets/images/photo1.jpg'
 
 
 
+/**
+ * The main component of the application.
+ */
 function App() {
 
   let i = 0;
@@ -33,17 +36,18 @@ function App() {
     <>
       <Navigation
       />
-      <div className="main-container">
 
-
-        <section className="image-slide">
-          <div className="image-container">
-            <div className="header-intro">
-              <h1>WELCOME TO THE KITCHEN WHISPER</h1>
-              <p>First we eat, then we do everything else.</p>
-            </div>
+      <section className="image-slide">
+        <div className="image-container">
+          <div className="header-intro">
+            <h1>WELCOME TO THE KITCHEN WHISPER</h1>
+            <p>First we eat, then we do everything else.</p>
           </div>
-        </section>
+        </div>
+      </section>
+
+
+      <div className="main-container">
 
         <main>
           <div className="category-list-container">
@@ -72,27 +76,51 @@ function App() {
           </div>
 
           <div className="recipe-container">
-            <Meal />
-            <Meal />
-            <Meal />
-            <Meal />
-            <Meal />
-            <Meal />
+            <Meal 
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription=" "
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
+
+            <Meal 
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription="Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls"
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
+            <Meal 
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription=""
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
+
+            <Meal
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription=" "
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
+
+            <Meal
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription="Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls"
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
+            <Meal
+              mealName="Chicken Sweet Potato Meal Prep Bowls"
+              mealDescription=""
+              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+            />
 
 
             {/* <div className="load-more-container">
             <button>Load More</button>
           </div> */}
           </div>
-
-
-
         </main>
 
-        <div className="footer-section">
-          <Footer />
-        </div>
-
+    
+      </div>
+      <div className="footer-section">
+        <Footer />
       </div>
     </>
   )
