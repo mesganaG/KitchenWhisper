@@ -1,5 +1,6 @@
 import './navStyle.css';
 import dropdownIcon from '../assets/images/expand_more.svg';
+import { Link } from 'react-router-dom';
 function Navigation(props) {
     const expand = () => {
         let dropdownContent = document.querySelectorAll('.dropdown-content');  
@@ -15,22 +16,24 @@ function Navigation(props) {
     }
     return (
         <nav>
-            <div className="logo">KITCHENWHISPER</div>
+            <div className="logo"><Link to="/">KITCHENWHISPER</Link></div>
             <div className="nav-list">
 
                 <div className="list-container">
 
-                    <a className='nav-list-btn' onClick={expand}>Meals <span><img src={dropdownIcon} alt="" /></span></a>
-                    <div className="dropdown-content">
+                    <a className='nav-list-btn' onClick={expand}>Meals </a>
+                    {/* <div className="dropdown-content">
                         <a href="#">Breakfast</a>
                         <a href="#">Lunch</a>
                         <a href="#">Dinner</a>
                         <a href="#">Snack</a>
                         <a href="#">Desserts</a>
-                    </div>
+
+                        <span><img src={dropdownIcon} alt="" /></span>
+                    </div> */}
                 </div>
 
-                <div className="list-container ">
+                {/* <div className="list-container ">
                     <a className='nav-list-btn' onClick={expand}>Cuisine <span><img src={dropdownIcon} alt="" /></span></a>
                     <div className="dropdown-content">
                         <a href="#">Ethiopian</a>
@@ -64,7 +67,7 @@ function Navigation(props) {
                         <a href="#">Low fat</a>
                         <a href="#">Low Carb</a>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="signup-container">

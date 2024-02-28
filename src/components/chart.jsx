@@ -1,42 +1,62 @@
 import Chart from 'chart.js/auto'; // Import the Chart class from the chart.js package
 import { Colors } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import "./chart.css";
 
 function PieChart(props) {
 
 
     const data = {
-        labels: ['Protein', 'Carbs', 'Fat'],
+        labels: ['Protein', 'Carbs', 'Fat', 'Fiber'],
+        backgroundColor: 'rgba(0, 0, 0, 0)',
         datasets: [
             {
                 data: props.items,
                 backgroundColor: [
-                    'rgba(144, 238, 144, .8)',
-                    'rgba(255, 165, 0, .8)',
-                    'rgba(255, 0, 0, .8)'
+                    'rgba(144, 238, 144, .5)',
+                    'rgba(255, 165, 0, .5)',
+                    'rgba(255, 0, 0, .5)',
+                    'rgba(0, 0, 255, .5)',
+                    'rgba(255, 255, 0, .5)',
                 ],
-                borderColor: 'rgba(0, 0, 0, 0)',
+                borderColor: 'rgba(0, 0, 0, .8)',
                 hoverOffset: 2,
+                barThickness: 50,
             }
         ]
 
     };
 
     const options = {
-        aspectRatio: 3,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                display: true,
-                position: 'bottom',
-                align: 'start',
-                labels: {
-                    color: 'black',
-                    fontSIze: 12,
-                    boxWidth: 12,
-                    position: 'bottom',
+        aspectRatio: 1.2,
+        scales: {
+            y: {
+                ticks: {
+                    beginAtZero: true
                 },
+                grid: {
+                    drawOnChartArea: false,
+                }
+            },
+            x: {
+                grid: {
+                    display: false ,
+                    drawOnChartArea: false,
+                }
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Nutritional Served',
+                color: 'black',
+                font: {
+                    size: 20,
+                }
+            },
+            legend: {
+                display: false,
+                position: 'bottom',
             },
             tooltip: {
                 enabled: true,
@@ -45,7 +65,7 @@ function PieChart(props) {
                 bodyColor: 'black',
                 borderColor: 'black',
 
-            
+
             }
 
         },
@@ -55,7 +75,7 @@ function PieChart(props) {
     Chart.register(Colors);
     return (
         <div className="pie-chart">
-            <Pie data={data} options={options} />
+            <Bar data={data} options={options} />
         </div>
     );
 }

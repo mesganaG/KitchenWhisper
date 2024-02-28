@@ -10,95 +10,8 @@ body {
 }
 
 
-.main-container {
-  max-width: 1800px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  margin: 0 auto;
-
-}
-
-.image-slide {
-  width: 100%;
-  height: 600px;
-}
-
-.image-container {
-  background-image: url("https://media.post.rvohealth.io/wp-content/uploads/sites/2/2020/01/GRT-meal-prep-chicken-bean-1296x728-header-1296x728.jpg");
-  width: 100%;
-  height: 120%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0 auto;
-  padding-top: 250px;
-}
-
-.header-intro {
-  opacity: .8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: brown;
-  width: 70%;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 0rem 5rem 0 5rem;
-
-}
-
-.header-intro h1 {
-  font-size: 3rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.category-list-container {
+/* .app-container {
   position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  margin: 0 auto;
-  gap: 2rem;
-  padding-top: 4rem;
-}
-
-.category-list-container h2 {
-  display: none;
-  position: absolute;
-  width: 200px;
-  top: 1rem;
-  left: 0;
-  font-size: 2rem;
-  color: #fff;
-  background-color: darkgrey;
-}
-
-.search-box-container {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-
-}
-
-.recipe-container {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin: 3rem auto;
-  border-top: 1px solid darkgray;
-  padding: 2rem;
 }
 
 
@@ -108,9 +21,12 @@ main {
   justify-content: center;
   padding: 2rem;
   background-color: aliceblue;
-}
+} */
 
-.footer-section {
+/* .footer-section {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   display: flex;
   justify-content: center;
   padding: 2rem;
@@ -118,7 +34,8 @@ main {
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
-}
+} */
+
 
 /* .load-more-container button {
   padding: 1.5rem 4rem;

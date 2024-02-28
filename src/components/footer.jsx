@@ -5,6 +5,7 @@ import Instagram from '../assets/images/instagram-icon.svg'
 import Youtube from '../assets/images/youtube-icon.svg'
 function Footer() {
     return (
+        <>
         <div className="footer">
 
             <div className="top-section">
@@ -53,6 +54,7 @@ function Footer() {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

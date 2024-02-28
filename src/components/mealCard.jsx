@@ -1,6 +1,7 @@
 import './mealCard.css';
 import PieChart from './chart';
 import { Link } from 'react-router-dom';
+import { Pie } from 'react-chartjs-2';
 function MealCard(props) {
 
   return (
@@ -14,18 +15,11 @@ function MealCard(props) {
 
         <div className="meal-description">
           {/* <Link to="/mealDetail"><h3>{props.mealName}</h3></Link>  */}
-          <Link to="/mealDetail" id='meal-name' replace><h3>{props.mealName}</h3></Link>
+          <Link to="/mealDetail" id='meal-name'><h3>{props.mealName}</h3></Link>
         </div>
      
 
-        <div className="meal-nutrition">
-
-          <div className="chart-container">
-            <PieChart
-              items={[20, 20, 20]}
-            />
-          </div>
-         
+        <div className="meal-nutrition">        
 
           <div className="total-nutrients">
             <h3>250 <sub>kcal</sub></h3>
