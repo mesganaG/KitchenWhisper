@@ -14,7 +14,6 @@ function MealCard(props) {
       <div className="meal-info">
 
         <div className="meal-description">
-          {/* <Link to="/mealDetail"><h3>{props.mealName}</h3></Link>  */}
           <Link to="/mealDetail" id='meal-name'><h3>{props.mealName}</h3></Link>
         </div>
      
