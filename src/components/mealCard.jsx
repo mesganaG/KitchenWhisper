@@ -1,7 +1,9 @@
 import './mealCard.css';
-import PieChart from './chart';
+import stopwatch from '../assets/images/stopwatch.svg';
 import { Link } from 'react-router-dom';
-import { Pie } from 'react-chartjs-2';
+import { useState, useEffect } from 'react';
+
+
 function MealCard(props) {
 
   return (
@@ -20,14 +22,17 @@ function MealCard(props) {
 
         <div className="meal-nutrition">        
 
+      
+
           <div className="total-nutrients">
-            <h3>250 <sub>kcal</sub></h3>
-            <ul>
-              <li className='protien'>Protien <span>34g</span></li>
-              <li className='carbs'>Carbs <span>34g</span></li>
-              <li>Fat <span className='fat'>34g</span></li>
-              <li>Sugar<span className='sugar'>34g</span></li>
-            </ul>
+            <div className="diet-label">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ea. Obcaecati quo cupiditate animi nobis </p>
+            </div>
+            <div className="time-to-cook">
+              <img src={stopwatch} alt="stopwatch icon" />
+              <p>60 mins</p>
+
+            </div>
           </div>
         </div>
 

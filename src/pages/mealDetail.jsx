@@ -2,7 +2,6 @@ import './mealDetail.css';
 import Navigation from '../components/navigation.jsx'
 import Footer from '../components/footer.jsx'
 import PieChart from '../components/chart.jsx'
-import { Pie } from 'react-chartjs-2';
 
 function MealDetail() {
     return (

@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import MealDetail from './pages/mealDetail.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
     path: "/mealDetail",
     element: <MealDetail />,
   },
+  {
+    path: "/About",
+    element: <About />,
+  },
+  {
+    path: "/Contact",
+    element: <Contact />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

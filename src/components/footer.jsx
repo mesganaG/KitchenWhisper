@@ -3,6 +3,7 @@ import Twitter from '../assets/images/twitter-icon.svg'
 import Facebook from '../assets/images/facebook-icon.svg'
 import Instagram from '../assets/images/instagram-icon.svg'
 import Youtube from '../assets/images/youtube-icon.svg'
+import Logo from '../assets/images/logo.png'
 function Footer() {
     return (
         <>
@@ -10,7 +11,7 @@ function Footer() {
 
             <div className="top-section">
                 <div className="footer-logo">
-                    <h1>The Kitchen Whisper</h1>
+                    <img src={Logo} alt="logo" />
                 </div>
 
                 <div className="footer-links">
