@@ -74,7 +74,7 @@ function Home() {
 
 
             <RecipeContainer
-              mealName={fullWord}
+              mealName={inputValue}
             />
             {/* <RecipeContainer />
             <div className="display-other">

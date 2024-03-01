@@ -81,7 +81,7 @@ main {
 
 .recipe-container {
     width: 100%;
-    background-color: brown;
+   
     margin: 3rem auto;
     display: flex;
     flex-direction: column;

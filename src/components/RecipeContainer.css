@@ -1,7 +1,9 @@
 .list-recipes{
-    background-color: antiquewhite;
+
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 90%;
     padding: 1rem;
 }

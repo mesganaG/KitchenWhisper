@@ -1,5 +1,7 @@
 import './mealCard.css';
 import stopwatch from '../assets/images/stopwatch.svg';
+import MealDetail from '../pages/mealDetail';
+import processFetch from './processFetch';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -11,7 +13,6 @@ function MealCard(props) {
       <div className="meal-image">
         <img src={props.imageSrc} alt="meal" />
       </div>
-
 
       <div className="meal-info">
 
