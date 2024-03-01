@@ -1,13 +1,18 @@
 import './navStyle.css';
 import dropdownIcon from '../assets/images/expand_more.svg';
 import { Link } from 'react-router-dom';
+import Twitter from '../assets/images/twitter-icon.svg'
+import Facebook from '../assets/images/facebook-icon.svg'
+import Instagram from '../assets/images/instagram-icon.svg'
+import Youtube from '../assets/images/youtube-icon.svg'
+import Logo from '../assets/images/logo.png'
 function Navigation(props) {
     const expand = () => {
-        let dropdownContent = document.querySelectorAll('.dropdown-content');  
+        let dropdownContent = document.querySelectorAll('.dropdown-content');
         let navListBtn = document.querySelectorAll('.list-container');
-        for(let i = 0; i < navListBtn.length; i++ ){
+        for (let i = 0; i < navListBtn.length; i++) {
             navListBtn[i].addEventListener('click', () => {
-               dropdownContent[i].classList.add('show');
+                dropdownContent[i].classList.add('show');
             });
             navListBtn[i].addEventListener('mouseleave', () => {
                 dropdownContent[i].classList.remove('show');
@@ -16,22 +21,27 @@ function Navigation(props) {
     }
     return (
         <nav>
-            <div className="logo"><Link to="/">KITCHENWHISPER</Link></div>
             <div className="nav-list">
 
-                <div className="list-container">
+                <div className="logo">
 
-                    <a className='nav-list-btn' onClick={expand}>Meals </a>
-                    {/* <div className="dropdown-content">
-                        <a href="#">Breakfast</a>
-                        <a href="#">Lunch</a>
-                        <a href="#">Dinner</a>
-                        <a href="#">Snack</a>
-                        <a href="#">Desserts</a>
-
-                        <span><img src={dropdownIcon} alt="" /></span>
-                    </div> */}
+                    <Link to="/"><img src={Logo} alt="" /></Link>
                 </div>
+                <div className="list-container">
+                    <Link to="/"><h3>Home</h3></Link>
+                    <Link to="/About"><h3>About</h3></Link>
+                    <Link to="/Contact"><h3>Contact</h3></Link>
+                </div>
+
+
+                {/* <div className="social">
+                    <ul>
+                        <li><a href="#"><img src={Youtube} alt="Youtube" /></a></li>
+                        <li><a href="#"><img src={Instagram} alt="Instagram" /></a></li>
+                        <li><a href="#"><img src={Facebook} alt="Facebook" /></a></li>
+                        <li><a href="#"><img src={Twitter} alt="Twitter" /></a></li>
+                    </ul>
+                </div> */}
 
                 {/* <div className="list-container ">
                     <a className='nav-list-btn' onClick={expand}>Cuisine <span><img src={dropdownIcon} alt="" /></span></a>

@@ -2,9 +2,11 @@ import './mealDetail.css';
 import Navigation from '../components/navigation.jsx'
 import Footer from '../components/footer.jsx'
 import PieChart from '../components/chart.jsx'
-import { Pie } from 'react-chartjs-2';
+import { processFetch } from '../components/processFetch.js';
 
 function MealDetail() {
+    const mealName = processFetch();
+    console.log(mealName);
     return (
         <>
 
