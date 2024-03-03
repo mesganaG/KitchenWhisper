@@ -1,7 +1,4 @@
 import Category from '../components/categoryNav'
-import SearchBox from '../components/searchRecipe'
-import Meal from '../components/mealCard'
-import Footer from '../components/footer'
 import searchIcon from '../assets/images/search-icon.svg';
 import RecipeContainer from '../components/RecipeContainer'
 import { useState, useEffect } from 'react';
@@ -10,19 +7,29 @@ import './Home.css'
 
 function Home() {
   const [inputValue, setInputValue] = useState('');
-  const [fullWord, setFullWord] = useState('');
+  const [meal, setMeal] = useState('');
+  const [displayStatus, setDisplayStatus] = useState(false);
 
   const handleKeyDown = (event) => {
+    setInputValue(event.target.value);
     if (event.key === 'Enter') {
-      setInputValue(event.target.value);
+      setMeal(inputValue);
+      setDisplayStatus(true);
+      if (inputValue === '') {
+        setDisplayStatus(false);
+      }
     }
   };
 
   const handleSubmitButtonClick = () => {
-    setFullWord(inputValue);
+    setMeal(inputValue);
+    setDisplayStatus(true);
+
+    if (inputValue === '') {
+      setDisplayStatus(false);
+    }
   };
 
-  console.log(inputValue);
 
 
   return (
@@ -63,7 +70,7 @@ function Home() {
           <div className="search-box-container">
             <div className="search-container">
               <div className='input-container'>
-                <input type="text"  onKeyDown={handleKeyDown} placeholder="Search for a recipe" />
+                <input type="text" onKeyDown={handleKeyDown} placeholder="Search for a recipe" />
                 <button onClick={handleSubmitButtonClick}><img src={searchIcon} alt="search icon" /></button>
               </div>
             </div>
@@ -73,22 +80,43 @@ function Home() {
           <div className='recipe-container'>
 
 
-            <RecipeContainer
-              mealName={inputValue}
-            />
-            {/* <RecipeContainer />
-            <div className="display-other">
-              <h2>Other Recipes</h2>
+            
 
-            </div>
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"chicken"}
+                rowNumber={3}
+                sectionHeader={"Chicken Recipes"}
+              /> : <RecipeContainer
+                mealName={meal}
+                rowNumber={15}
+              />
+            }
 
-            <RecipeContainer />
-            <RecipeContainer />
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"beef"}
+                rowNumber={3}
+                sectionHeader={"Beef Recipes"}
+              /> : null
+            }
 
-            <div className="display-other">
-              <h2>Other Recipes</h2>
-  
-            </div> */}
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"pork"}
+                rowNumber={3}
+                sectionHeader={"Pork Recipes"}
+              /> : null
+            }
+
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"vegetarian"}
+                rowNumber={3}
+                sectionHeader={"Vegetarian Recipes"}
+              /> : null
+            }
+          
 
 
           </div>

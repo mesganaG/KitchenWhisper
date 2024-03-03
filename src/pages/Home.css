@@ -14,6 +14,7 @@ main {
     width: 100%;
     margin: 0 auto;
 
+
 }
 
 .image-slide {
@@ -80,12 +81,10 @@ main {
 }
 
 .recipe-container {
-    width: 100%;
-   
+    width: 90%;
     margin: 3rem auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 2rem;
 }
 

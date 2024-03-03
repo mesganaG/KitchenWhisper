@@ -1,29 +1,30 @@
 import './mealCard.css';
 import stopwatch from '../assets/images/stopwatch.svg';
-import MealDetail from '../pages/mealDetail';
-import processFetch from './processFetch';
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
 
 function MealCard(props) {
 
+  
   return (
+
+    <>
+
     <div className="meal-card">
+
+     
       <div className="meal-image">
-        <img src={props.imageSrc} alt="meal" />
+        {/* <img src={props.imageSrc} alt="meal" /> */}
+          <Link to={`/mealDetail/${encodeURIComponent(props.mealName)}`} style={{width:"100%"}}><img src={props.imageSrc} alt="meal" /></Link>
       </div>
 
       <div className="meal-info">
 
         <div className="meal-description">
-          <Link to="/mealDetail" id='meal-name'><h3>{props.mealName}</h3></Link>
+            <Link to={`/mealDetail/${encodeURIComponent(props.mealName)}`} id='meal-name'><h3>{props.mealName}</h3></Link>
         </div>
-     
 
-        <div className="meal-nutrition">        
-
-      
+        <div className="meal-nutrition">       
 
           <div className="total-nutrients">
             <div className="diet-label">
@@ -39,6 +40,8 @@ function MealCard(props) {
 
       </div>
     </div>
+
+    </>
   );
 }
 
