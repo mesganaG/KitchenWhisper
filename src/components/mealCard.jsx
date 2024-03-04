@@ -27,9 +27,9 @@ function MealCard(props) {
         <div className="meal-nutrition">       
 
           <div className="total-nutrients">
-            <div className="diet-label">
+            {/* <div className="diet-label">
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, ea. Obcaecati quo cupiditate animi nobis </p>
-            </div>
+            </div> */}
             <div className="time-to-cook">
               <img src={stopwatch} alt="stopwatch icon" />
               <p>60 mins</p>

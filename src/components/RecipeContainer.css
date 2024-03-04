@@ -25,3 +25,38 @@
     border-bottom: 2px solid brown;
     color: brown;
 }
+
+
+/* Responsiveness section */
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 800px) and (max-width: 1700px) {
+    .list-recipes {
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 1079px) {
+    .list-recipes {
+        width: 100%;
+        justify-content: unset;
+        gap: 1rem;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 650px) {
+    .list-recipes {
+        width: 100%;
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}

@@ -2,7 +2,6 @@ import Category from '../components/categoryNav'
 import searchIcon from '../assets/images/search-icon.svg';
 import RecipeContainer from '../components/RecipeContainer'
 import { useState, useEffect } from 'react';
-// import photo from "https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
 import './Home.css'
 
 function Home() {
@@ -50,20 +49,20 @@ function Home() {
 
             <h2>Categories</h2>
             <Category
-              category="Breakfast"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Low Carb"
+              imageSrc="https://t4.ftcdn.net/jpg/03/64/97/07/360_F_364970775_Xp9VenZQhV0HSD9qMu7hmt2stCAxcugz.jpg"
             />
             <Category
-              category="Lunch"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Balanced"
+              imageSrc="https://www.greatgrinskids.com/wp-content/uploads/sites/1049/2016/04/A-Braces-Friendly-Balanced-Diet.png"
             />
             <Category
-              category="Dinner"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="High Protein"
+              imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRp7QbeEwWfThR7CZJS40TovJJPKPyiOasdw&usqp=CAU"
             />
             <Category
-              category="Snacks"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Low Calorie"
+              imageSrc="https://previews.123rf.com/images/bsd555/bsd5551911/bsd555191102705/135629688-calorie-free-green-flat-design-long-shadow-glyph-icon-low-calories-snacks-for-weight-loss-product.jpg"
             />
           </div>
 
@@ -80,7 +79,7 @@ function Home() {
           <div className='recipe-container'>
 
 
-            
+
 
             {
               displayStatus === false ? <RecipeContainer
@@ -116,7 +115,7 @@ function Home() {
                 sectionHeader={"Vegetarian Recipes"}
               /> : null
             }
-          
+
 
 
           </div>

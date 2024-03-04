@@ -12,6 +12,7 @@
     width: 100%;
     margin: 0 auto;
     gap: 2rem;
+    /* background-color: #4e4646; */
     background-color: aliceblue;
     /* background-color: rgb(58, 58, 70); */
 }
@@ -26,7 +27,6 @@
     gap: 1.5rem;
     color: black;
     margin: 0 auto;
-    background-color: aliceblue;
 }
 
 .left-section {
@@ -69,7 +69,6 @@
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    background-color: aliceblue;
     width: 50%;
 }
 
@@ -82,13 +81,14 @@
 .meal_image {
     width: 90%;
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
 }
 
 .meal_image img {
     width: 100%;
     object-fit: cover;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: .8;
 }
 
 
@@ -117,6 +117,7 @@
     background-color: azure;
     padding: .5rem;
     border-radius: 4rem;
+    text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
 }
@@ -127,6 +128,7 @@
     background-color: cadetblue;
     padding: 1rem;
     border-radius: 50%;
+    text-align: center;
 }
 
 
