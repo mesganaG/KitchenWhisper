@@ -9,7 +9,7 @@ function MealDetail() {
     let { mealName } = useParams();
     const URL = `https://api.edamam.com/api/recipes/v2?app_id=e9933851&app_key=56c2d682ac2afaee562ae3bf46a67706&type=public&q=${mealName}`;
 
-    const [recipe, setRecipe] = useState(null); // Initialize recipe as null
+    const [recipe, setRecipe] = useState(null);
     useEffect(() => {
         fetch(URL)
             .then(response => {
@@ -29,6 +29,9 @@ function MealDetail() {
     if (!recipe) {
         return <div>Loading...</div>;
     }
+    const ingredients = recipe.ingredients;
+
+    console.log(ingredients);
     return (
         <>
 
@@ -50,6 +53,7 @@ function MealDetail() {
                                 <PieChart
                                     labels={[recipe.digest[0].label, recipe.digest[1].label, recipe.digest[2].label, recipe.digest[3].label]}
                                     items={[recipe.digest[0].total, recipe.digest[1].total, recipe.digest[2].total, recipe.digest[3].total]}
+
                                 />
                             </div>
                         </div>
@@ -57,79 +61,75 @@ function MealDetail() {
 
                     </div>
 
-                    <div className="right-section">
-                        <div className="nutrition-serving">
+                    <div className="bottom-section-container">
 
-                            <div className="diet-serving">
-                                <h3>{Math.floor(recipe.digest[0].total)}</h3>
-                                <p>{[recipe.digest[0].label]}</p>
-                            </div>
-                            <div className="diet-serving">
-                                <h3>{Math.floor(recipe.digest[1].total)}</h3>
-                                <p>{[recipe.digest[1].label]}</p>
-                            </div>
-                            <div className="diet-serving">
-                                <h3>{Math.floor(recipe.digest[2].total)}</h3>
-                                <p>{[recipe.digest[2].label]}</p>
-                            </div>
-                            <div className="diet-serving">
-                                <h3>{Math.floor(recipe.digest[3].total)}</h3>
-                                <p>{[recipe.digest[3].label]}</p>
+                        <div className="right-section">
+                            <div className="nutrition-serving">
+
+                                <div className="diet-serving">
+                                    <h3>{Math.floor(recipe.digest[0].total)}</h3>
+                                    <p>{[recipe.digest[0].label]}</p>
+                                </div>
+                                <div className="diet-serving">
+                                    <h3>{Math.floor(recipe.digest[1].total)}</h3>
+                                    <p>{[recipe.digest[1].label]}</p>
+                                </div>
+                                <div className="diet-serving">
+                                    <h3>{Math.floor(recipe.digest[2].total)}</h3>
+                                    <p>{[recipe.digest[2].label]}</p>
+                                </div>
+                                <div className="diet-serving">
+                                    <h3>{Math.floor(recipe.digest[3].total)}</h3>
+                                    <p>{[recipe.digest[3].label]}</p>
+                                </div>
+
                             </div>
 
+
+
+
+                            <div className="ingredients-section">
+
+
+
+                                <h3>Ingredients</h3>
+                                {
+                                    ingredients.slice(0,7).map((item, index) => {
+                                        return (
+                                            <div className="ingredient-list" key={index}>
+
+                                                <div className="ingredient">
+                                                    <img src={item.image} alt="" />
+                                                </div>
+
+                                                <div className="description">
+                                                    <p>{item.text}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
 
-
-
-
-                        <div className="ingredients-section">
-
-
-
-                            <h3>Ingredients</h3>
-
-
-                            <div className="ingredient-list">
-
-                                <div className="ingredient">
-                                    <img src="https://www.edamam.com/food-img/bb7/bb76cdd34c080bf65908c09812fd9c8d.jpg" alt="" />
-                                </div>
-
-                                <div className="description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Tempore, dolorem expedita vitae magnam, facere pariatur iure ipsam !</p>
-                                </div>
+                        <div className="healthlabels-container">
+                            
+                            <h3>Health Labels</h3>
+                            <div className="health-labels">
+                                {
+                                    recipe.healthLabels.map((item, index) => {
+                                        return (
+                                            <div className="health-label" key={index}>
+                                                <p>{item}</p>
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
 
-
-                            <div className="ingredient-list">
-
-                                <div className="ingredient">
-                                    <img src="https://www.edamam.com/food-img/bb7/bb76cdd34c080bf65908c09812fd9c8d.jpg" alt="" />
-                                </div>
-
-                                <div className="description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Tempore, dolorem expedita vitae magnam, facere pariatur iure ipsam !</p>
-                                </div>
-                            </div>
-
-
-                            <div className="ingredient-list">
-
-                                <div className="ingredient">
-                                    <img src="https://www.edamam.com/food-img/bb7/bb76cdd34c080bf65908c09812fd9c8d.jpg" alt="" />
-                                </div>
-
-                                <div className="description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Tempore, dolorem expedita vitae magnam, facere pariatur iure ipsam !</p>
-                                </div>
-                            </div>
 
 
                         </div>
-
 
 
 
