@@ -17,9 +17,13 @@ function App() {
         <Navigation/>
         <Home />   
         <Footer />
+        
+        <div className="App">
+          <Login />
+        </div>
       
-     
     </>
+
   )
 }
 

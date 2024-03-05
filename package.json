@@ -13,10 +13,12 @@
     "chart.css": "^0.1.1",
     "chart.js": "^4.4.1",
     "charts.css": "^1.1.0",
+    "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-devtools": "^5.0.0",
     "react-dom": "^18.2.0",
+    "react-facebook-login": "^4.1.1",
     "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
