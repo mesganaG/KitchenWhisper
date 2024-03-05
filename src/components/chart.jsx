@@ -7,7 +7,7 @@ function PieChart(props) {
 
 
     const data = {
-        labels: ['Protein', 'Carbs', 'Fat', 'Fiber'],
+        labels: props.labels,
         backgroundColor: 'rgba(0, 0, 0, 0)',
         datasets: [
             {
@@ -28,7 +28,7 @@ function PieChart(props) {
     };
 
     const options = {
-        aspectRatio: 1.2,
+        aspectRatio: 1.4,
         scales: {
             y: {
                 ticks: {
@@ -48,7 +48,7 @@ function PieChart(props) {
         plugins: {
             title: {
                 display: true,
-                text: 'Nutritional Served',
+                text: 'Nutrition Facts (mg)',
                 color: 'black',
                 font: {
                     size: 20,
@@ -64,12 +64,14 @@ function PieChart(props) {
                 titleColor: 'black',
                 bodyColor: 'black',
                 borderColor: 'black',
+                
 
 
             }
 
         },
         responsive: true,
+    
     }
 
     Chart.register(Colors);

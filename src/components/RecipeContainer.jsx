@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import MealCard from "./mealCard";
-import SearchRecipe from "./searchRecipe";
 import './RecipeContainer.css';
 import { useState, useEffect } from 'react';
 
@@ -17,9 +17,6 @@ function fetchRecipes(URL) {
             .then(data => {
                 setRecipeList(data.hits);
             })
-            .catch(error => {
-                console.error(error);
-            });
     }, [URL]);
 
     return recipeList;
@@ -30,13 +27,15 @@ function RecipeContainer(props) {
 
     const URL = `https://api.edamam.com/api/recipes/v2?app_id=e9933851&app_key=56c2d682ac2afaee562ae3bf46a67706&type=public&q=${props.mealName}`;
     let recipe = fetchRecipes(URL);
+
     return (
         <>
-            <div className="list-recipes">
-
-
+            <div className="section-text">
+                <Link to="/mealDetail" id='meal-name' style={{color:"black"}}><h3>{props.sectionHeader}</h3></Link>
+            </div>
+            <div className="list-recipes">             
                 {
-                    recipe.slice(0, 15).map((recipe) => {
+                    recipe.slice(0, props.rowNumber).map((recipe) => {
                         return <MealCard
                             mealName={recipe.recipe.label}
                             mealDescription=" "
@@ -44,29 +43,6 @@ function RecipeContainer(props) {
                         />
                     })
                 }
-
-                {/* <SearchRecipe
-                    mealName={props.mealName}
-                    mealDescription=" " 
-                    imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
-                /> */}
-
-                {/* <Meal
-                    mealName={props.mealName}
-                    mealDescription=" "
-                    imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
-                /> */}
-{/* 
-                <Meal
-                    mealName="Chicken Sweet Potato Meal Prep Bowls"
-                    mealDescription="Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls Chicken-Sweet-Potato-Meal-Prep-Bowls"
-                    imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
-                />
-                <Meal
-                    mealName="Chicken Sweet Potato Meal Prep Bowls"
-                    mealDescription=""
-                    imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
-                /> */}
 
 
             </div>

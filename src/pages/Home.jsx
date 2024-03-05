@@ -1,28 +1,34 @@
 import Category from '../components/categoryNav'
-import SearchBox from '../components/searchRecipe'
-import Meal from '../components/mealCard'
-import Footer from '../components/footer'
 import searchIcon from '../assets/images/search-icon.svg';
 import RecipeContainer from '../components/RecipeContainer'
 import { useState, useEffect } from 'react';
-// import photo from "https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
 import './Home.css'
 
 function Home() {
   const [inputValue, setInputValue] = useState('');
-  const [fullWord, setFullWord] = useState('');
+  const [meal, setMeal] = useState('');
+  const [displayStatus, setDisplayStatus] = useState(false);
 
   const handleKeyDown = (event) => {
+    setInputValue(event.target.value);
     if (event.key === 'Enter') {
-      setInputValue(event.target.value);
+      setMeal(inputValue);
+      setDisplayStatus(true);
+      if (inputValue === '') {
+        setDisplayStatus(false);
+      }
     }
   };
 
   const handleSubmitButtonClick = () => {
-    setFullWord(inputValue);
+    setMeal(inputValue);
+    setDisplayStatus(true);
+
+    if (inputValue === '') {
+      setDisplayStatus(false);
+    }
   };
 
-  console.log(inputValue);
 
 
   return (
@@ -43,27 +49,27 @@ function Home() {
 
             <h2>Categories</h2>
             <Category
-              category="Breakfast"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Low Carb"
+              imageSrc="https://t4.ftcdn.net/jpg/03/64/97/07/360_F_364970775_Xp9VenZQhV0HSD9qMu7hmt2stCAxcugz.jpg"
             />
             <Category
-              category="Lunch"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Balanced"
+              imageSrc="https://www.greatgrinskids.com/wp-content/uploads/sites/1049/2016/04/A-Braces-Friendly-Balanced-Diet.png"
             />
             <Category
-              category="Dinner"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="High Protein"
+              imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRp7QbeEwWfThR7CZJS40TovJJPKPyiOasdw&usqp=CAU"
             />
             <Category
-              category="Snacks"
-              imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
+              category="Low Calorie"
+              imageSrc="https://previews.123rf.com/images/bsd555/bsd5551911/bsd555191102705/135629688-calorie-free-green-flat-design-long-shadow-glyph-icon-low-calories-snacks-for-weight-loss-product.jpg"
             />
           </div>
 
           <div className="search-box-container">
             <div className="search-container">
               <div className='input-container'>
-                <input type="text"  onKeyDown={handleKeyDown} placeholder="Search for a recipe" />
+                <input type="text" onKeyDown={handleKeyDown} placeholder="Search for a recipe" />
                 <button onClick={handleSubmitButtonClick}><img src={searchIcon} alt="search icon" /></button>
               </div>
             </div>
@@ -73,22 +79,43 @@ function Home() {
           <div className='recipe-container'>
 
 
-            <RecipeContainer
-              mealName={inputValue}
-            />
-            {/* <RecipeContainer />
-            <div className="display-other">
-              <h2>Other Recipes</h2>
 
-            </div>
 
-            <RecipeContainer />
-            <RecipeContainer />
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"chicken"}
+                rowNumber={3}
+                sectionHeader={"Chicken Recipes"}
+              /> : <RecipeContainer
+                mealName={meal}
+                rowNumber={15}
+              />
+            }
 
-            <div className="display-other">
-              <h2>Other Recipes</h2>
-  
-            </div> */}
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"beef"}
+                rowNumber={3}
+                sectionHeader={"Beef Recipes"}
+              /> : null
+            }
+
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"pork"}
+                rowNumber={3}
+                sectionHeader={"Pork Recipes"}
+              /> : null
+            }
+
+            {
+              displayStatus === false ? <RecipeContainer
+                mealName={"vegetarian"}
+                rowNumber={3}
+                sectionHeader={"Vegetarian Recipes"}
+              /> : null
+            }
+
 
 
           </div>

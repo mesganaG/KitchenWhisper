@@ -13,10 +13,9 @@
     border-radius: 1rem;
     /* padding: 1rem 0 2rem .5rem; */
     color: black;
-    background-color:azure;
+    background-color: azure;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    background: transparent;
-   
+
 }
 
 .meal-image {
@@ -62,7 +61,7 @@
     text-align: center;
     color: black;
     font-family: sans-serif, Arial, Helvetica;
-  
+
 }
 
 .meal-info h3:hover {
@@ -116,6 +115,7 @@
     color: black;
     font-size: 1.5rem;
 }
+
 .total-nutrients ul {
     list-style: none;
     text-align: left;
@@ -134,7 +134,33 @@
     color: black;
 }
 
+/* Desktop  */
+@media (min-width: 1080px) and (max-width: 1700px) {
+    .meal-card {
+        width: 30%;
+    }
+}
 
+/* Tablet  */
 
+@media (min-width: 768px) and (max-width: 1079px) {
+    .meal-card {
+        width: 35%;
+    }
 
+    .meal-info h3 {
+        font-size: 1.2rem;
+    }
+}
 
+/* Mobile  */
+
+@media (max-width: 768px) {
+    .meal-card {
+        width: 90%;
+    }
+
+    .meal-info h3 {
+        font-size: 1rem;
+    }
+}

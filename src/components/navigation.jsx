@@ -31,6 +31,7 @@ function Navigation(props) {
                     <Link to="/"><h3>Home</h3></Link>
                     <Link to="/About"><h3>About</h3></Link>
                     <Link to="/Contact"><h3>Contact</h3></Link>
+
                 </div>
 
 
@@ -80,9 +81,9 @@ function Navigation(props) {
                 </div> */}
             </div>
 
-            <div className="signup-container">
+            {/* <div className="signup-container">
                 <button className="signup">Sign Up</button>
-            </div>
+            </div> */}
         </nav>
     );
 }

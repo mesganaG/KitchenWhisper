@@ -1,6 +1,5 @@
 import React from "react";
 import './searchRecipe.css';
-import searchIcon from '../assets/images/search-icon.svg';
 import MealCard from "./mealCard";
 import { useState, useEffect } from 'react';
 
@@ -42,13 +41,6 @@ function SearchRecipe(props) {
                     imageSrc={recipe.recipe.image}
                 />
             })
-            // <MealCard
-            //     mealName={props.mealName}
-            //     mealDescription=" "
-            //     imageSrc="https://pinchofyum.com/wp-content/uploads/Chicken-Sweet-Potato-Meal-Prep-Bowls-Recipe.jpg"
-            // />
-
-
         }
         </>
     );

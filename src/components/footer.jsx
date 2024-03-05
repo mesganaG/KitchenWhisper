@@ -43,7 +43,7 @@ function Footer() {
 
             </div>
             <div className="bottom-section">
-                <p>© 2024 The Kitchen Whisper</p>
+               
 
                 <div className="social-icons">
                     <ul>
@@ -53,6 +53,8 @@ function Footer() {
                         <li><a href="#"><img src={Twitter} alt="Twitter" /></a></li>
                     </ul>
                 </div>
+
+                <p>© 2024 The Kitchen Whisper</p>
             </div>
         </div>
         </>
