@@ -83,7 +83,7 @@ function Home() {
 
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"chicken"}
+                mealName={"wings"}
                 rowNumber={3}
                 sectionHeader={"Chicken Recipes"}
               /> : <RecipeContainer
@@ -94,9 +94,9 @@ function Home() {
 
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"beef"}
+                mealName={"salad"}
                 rowNumber={3}
-                sectionHeader={"Beef Recipes"}
+                sectionHeader={"Salad Recipes"}
               /> : null
             }
 
