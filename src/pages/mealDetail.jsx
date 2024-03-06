@@ -94,7 +94,7 @@ function MealDetail() {
 
                                 <h3>Ingredients</h3>
                                 {
-                                    ingredients.slice(0,7).map((item, index) => {
+                                    ingredients.slice(0,10).map((item, index) => {
                                         return (
                                             <div className="ingredient-list" key={index}>
 

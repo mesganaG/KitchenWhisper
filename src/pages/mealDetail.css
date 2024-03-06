@@ -39,7 +39,7 @@
 
 .ingredients-section {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
     width: 100%;
