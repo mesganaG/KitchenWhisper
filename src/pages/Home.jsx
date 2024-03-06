@@ -49,7 +49,7 @@ function Home() {
 
             <h2>Categories</h2>
             <Category
-              category="Low Carb"
+              category="Low-Carb"
               imageSrc="https://t4.ftcdn.net/jpg/03/64/97/07/360_F_364970775_Xp9VenZQhV0HSD9qMu7hmt2stCAxcugz.jpg"
             />
             <Category
@@ -57,12 +57,12 @@ function Home() {
               imageSrc="https://www.greatgrinskids.com/wp-content/uploads/sites/1049/2016/04/A-Braces-Friendly-Balanced-Diet.png"
             />
             <Category
-              category="High Protein"
+              category="High-Protein"
               imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRp7QbeEwWfThR7CZJS40TovJJPKPyiOasdw&usqp=CAU"
             />
             <Category
-              category="Low Calorie"
-              imageSrc="https://previews.123rf.com/images/bsd555/bsd5551911/bsd555191102705/135629688-calorie-free-green-flat-design-long-shadow-glyph-icon-low-calories-snacks-for-weight-loss-product.jpg"
+              category="Low-Fat"
+              imageSrc="https://as2.ftcdn.net/v2/jpg/01/64/66/21/1000_F_164662156_vdh3PB0XwgixruZY3sDDZnUc2AqSQkeB.jpg"
             />
           </div>
 
@@ -78,43 +78,43 @@ function Home() {
 
           <div className='recipe-container'>
 
-
-
-
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"chicken"}
+                mealName={"Dinner"}
                 rowNumber={3}
-                sectionHeader={"Chicken Recipes"}
+                sectionHeader={"Dinner Recipes"}
               /> : <RecipeContainer
                 mealName={meal}
                 rowNumber={15}
               />
             }
 
+
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"beef"}
+                mealName={"Snacks"}
                 rowNumber={3}
-                sectionHeader={"Beef Recipes"}
+                sectionHeader={"Snacks"}
               /> : null
             }
 
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"pork"}
+                mealName={"Breakfast"}
                 rowNumber={3}
-                sectionHeader={"Pork Recipes"}
+                sectionHeader={"Breakfast Recipes"}
               /> : null
             }
 
             {
               displayStatus === false ? <RecipeContainer
-                mealName={"vegetarian"}
+                mealName={"Lunch vegan"}
                 rowNumber={3}
-                sectionHeader={"Vegetarian Recipes"}
+                sectionHeader={"Lunch Recipes"}
               /> : null
             }
+
+         
 
 
 

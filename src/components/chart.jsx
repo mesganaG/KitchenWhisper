@@ -13,11 +13,12 @@ function PieChart(props) {
             {
                 data: props.items,
                 backgroundColor: [
-                    'rgba(144, 238, 144, .5)',
-                    'rgba(255, 165, 0, .5)',
                     'rgba(255, 0, 0, .5)',
                     'rgba(0, 0, 255, .5)',
-                    'rgba(255, 255, 0, .5)',
+                    'rgba(144, 238, 144, .5)',
+                    'rgba(255, 165, 0, .5)',
+                
+        
                 ],
                 borderColor: 'rgba(0, 0, 0, .8)',
                 hoverOffset: 2,
