@@ -5,6 +5,7 @@ import './App.css'
 import Home from './pages/Home'
 import MealDetail from './pages/mealDetail'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Login from './pages/Login'
 
 
 function App() {
@@ -16,9 +17,13 @@ function App() {
         <Navigation/>
         <Home />   
         <Footer />
+        
+        <div className="App">
+          <Login />
+        </div>
       
-     
     </>
+
   )
 }
 
