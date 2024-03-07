@@ -1,5 +1,5 @@
 
-# [KITCHENWHISPER]
+# KITCHENWHISPER
 
 Kitchenwishper is a web application designed to simplify dietary management by providing users with a convenient platform to search for, discover, and track recipes tailored to their dietary preferences and nutritional needs.
 
