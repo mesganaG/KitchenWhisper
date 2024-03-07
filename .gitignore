@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore Vite configuration file
+vite.config.js
+
+# Ignore package.json files (except the main one)
+package.json
+package-lock.json
+
+# Ignore ESLint configuration file
+.eslintrc.cjs
