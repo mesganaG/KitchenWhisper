@@ -16,6 +16,7 @@ Kitchenwishper is a web application designed to simplify dietary management by p
   - HTML
   - CSS
   - JavaScript (React)
+  - Vite 
 
 - **Charting**:
   - Chartjs
