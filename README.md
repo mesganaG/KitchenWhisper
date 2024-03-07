@@ -26,8 +26,10 @@ Kitchenwishper is a web application designed to simplify dietary management by p
    ```bash
    git clone https://github.com/mesganaG/KitchenWhisper.git
 2. **Install Dependencies**:
+   ```bash
     cd KitchenWhisper
     npm install
 
-3. **Run the application**
+4. **Run the application**
+   ```bash
     npm run dev
