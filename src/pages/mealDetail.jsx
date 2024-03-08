@@ -30,8 +30,6 @@ function MealDetail() {
         return <div>Loading...</div>;
     }
     const ingredients = recipe.ingredients;
-
-    console.log(ingredients);
     return (
         <>
 
