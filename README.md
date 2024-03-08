@@ -1,7 +1,7 @@
 
 # KITCHENWHISPER
 
-Kitchenwishper is a web application designed to simplify dietary management by providing users with a convenient platform to search for, discover, and track recipes tailored to their dietary preferences and nutritional needs.
+Kitchenwishper is a web application designed to simplify dietary management by providing users with a convenient platform to search for, discover, and track recipes tailored to their dietary preferences and nutritional needs. To explore our website, please click [here](https://kitchenwhisper.netlify.app/).
 
 ## Features
 
