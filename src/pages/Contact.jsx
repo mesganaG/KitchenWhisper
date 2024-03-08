@@ -5,36 +5,6 @@ import Footer from '../components/footer'
 import { useState } from 'react';
 function Contact() {
 
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can perform actions like sending the form data to the server
-    console.log(formData);
-    // For demonstration, let's just reset the form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-  };
-  console.log(formData);
   return (
     
 
@@ -78,7 +48,7 @@ function Contact() {
           </div>
 
 
-          <form onSubmit={handleSubmit}>
+          <form>
        
 
             <div className="contact-form">
